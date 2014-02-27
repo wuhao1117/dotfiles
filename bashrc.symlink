@@ -1,0 +1,24 @@
+# bash completion
+if [ -f `brew --prefix`/etc/bash_completion ]; then
+    . `brew --prefix`/etc/bash_completion
+fi
+
+alias __git_ps1="git branch 2>/dev/null | grep '*' | sed 's/* \(.*\)/(\1)/'"
+
+# enable git PS1 prompt
+export GIT_PS1_SHOWDIRTYSTATE=true
+export GIT_PS1_SHOWUNTRACKEDFILES=true
+ 
+# define colorful gitful prompt
+PS1='\[\e[0;35m\][\t]\[\e[0;0m\]\u@\[\e[1;36m\]laptop\[\e[0;0m\]:\w\\$ '
+ 
+# colors and aliases in file browsing
+export CLICOLOR=1
+export LSCOLORS=ExFxCxDxBxegedabagacad
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+
+alias go="cd ~/Dropbox/tmux-profile/profiles && ruby ../load-tmux-profile.rb tmux && cd ~"
+alias dev="cd ~/Dropbox/dev"
+alias opens="open -a 'Sublime Text'"

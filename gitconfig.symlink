@@ -1,0 +1,11 @@
+[alias]
+	s = status
+[user]
+	name = Grant Titus
+	email = grant@granttitus.com
+[push]
+	default = simple
+[color]
+	ui = true
+[core]
+	editor = vim -f
