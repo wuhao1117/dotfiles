@@ -1,0 +1,3 @@
+## Install
+
+`rake install`
