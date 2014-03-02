@@ -1,23 +1,30 @@
 require 'rake'
 
-desc "Hook our dotfiles into system-standard positions."
+INSTALL_DIR = "#{ENV["HOME"]}/test_install"
+BACKUP_DIR = "#{INSTALL_DIR}/.dotfile_backup"
+
 task :install do
 
-  `mkdir -p "$HOME/.dotfile_backup/"`
+  `mkdir -p "#{BACKUP_DIR}"`
 
-  if !File.exists?("$HOME/.vim/")
-    `cp -r "$HOME/.vim/" "$HOME/.dotfile_backup/.vim/"`
-  end  
+  if File.exists?("#{INSTALL_DIR}/.vim/")
+    `cp -r "#{INSTALL_DIR}/.vim/" "#{BACKUP_DIR}/.vim/"`
+  end
 
-  `cp -r "$PWD/vim/" "$HOME/.vim"`
-  
+  if File.exists?("#{INSTALL_DIR}/tmux-profile/")
+    `cp -r "#{INSTALL_DIR}/tmux-profile/" "#{BACKUP_DIR}/.tmux-profile/"`
+  end
+
+  `cp -r "$PWD/vim/" "#{INSTALL_DIR}/.vim"`
+  `cp -r "$PWD/tmux-profile" "#{INSTALL_DIR}/tmux-profile"`
+
   linkables = Dir.glob('**{.symlink}')
   linkables.each do |linkable|
     file = linkable.split('/').last.split('.symlink').last
-    target = "#{ENV["HOME"]}/.#{file}"
+    target = "#{INSTALL_DIR}/.#{file}"
 
-    if !File.exists?("$HOME/.#{file}")
-      `mv "$HOME/.#{file}" "$HOME/.dotfile_backup/.#{file}"`
+    if File.exists?("#{INSTALL_DIR}/.#{file}")
+      `mv "#{INSTALL_DIR}/.#{file}" "#{BACKUP_DIR}/.#{file}"`
     end
     `mv "$PWD/#{linkable}" "#{target}"`
   end

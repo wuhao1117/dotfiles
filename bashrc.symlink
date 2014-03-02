@@ -19,6 +19,6 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
-alias go="cd ~/tmux-profile/profiles && ruby ../load-tmux-profile.rb tmux && cd ~"
+alias go="cd ~/tmux-profile && ruby load-tmux-profile.rb dev"
 alias dev="cd ~/Dropbox/dev"
 alias opens="open -a 'Sublime Text'"
