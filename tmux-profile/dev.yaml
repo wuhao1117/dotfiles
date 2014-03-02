@@ -1,0 +1,26 @@
+description: TMUX profile
+sessions:
+  - name: dev
+    dir: ~/tmux-profile
+    attach: true
+    windows:
+      - name: astro
+        cmd: cd ~/Dropbox && clear
+        panes:
+          - cmd: cd ~/Dropbox && clear
+            split: v
+            size: 20
+          - cmd: cd ~/Dropbox && clear
+            split: h
+      - name: bamboo
+        cmd: cd ~/Dropbox/dev && clear
+        panes:
+          - cmd: cd ~/Dropbox/dev && clear
+            split: v
+            size: 20
+      - name: calais
+        cmd: cd ~/Dropbox/dev && clear
+        panes:
+          - cmd: cd ~/Dropbox/dev && clear
+            split: v
+            size: 20
