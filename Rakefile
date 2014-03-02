@@ -5,6 +5,9 @@ BACKUP_DIR = "#{INSTALL_DIR}/.dotfile_backup"
 
 task :install do
 
+  if File.exists?("#{BACKUP_DIR}")
+    `rm -fr #{BACKUP_DIR}"`
+  end
   `mkdir -p "#{BACKUP_DIR}"`
 
   if File.exists?("#{INSTALL_DIR}/.vim/")
