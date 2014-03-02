@@ -5,22 +5,25 @@ BACKUP_DIR = "#{INSTALL_DIR}/.dotfile_backup"
 
 task :install do
 
+  # create new backup folder
   if File.exists?("#{BACKUP_DIR}")
-    `rm -fr #{BACKUP_DIR}"`
+    `rm -fr "#{BACKUP_DIR}"`
   end
   `mkdir -p "#{BACKUP_DIR}"`
 
+  # install .vim
   if File.exists?("#{INSTALL_DIR}/.vim/")
-    `cp -r "#{INSTALL_DIR}/.vim/" "#{BACKUP_DIR}/.vim/"`
+    `mv "#{INSTALL_DIR}/.vim/" "#{BACKUP_DIR}/.vim/"`
   end
-
-  if File.exists?("#{INSTALL_DIR}/tmux-profile/")
-    `cp -r "#{INSTALL_DIR}/tmux-profile/" "#{BACKUP_DIR}/.tmux-profile/"`
-  end
-
   `cp -r "$PWD/vim/" "#{INSTALL_DIR}/.vim"`
-  `cp -r "$PWD/tmux-profile" "#{INSTALL_DIR}/tmux-profile"`
 
+  # install tmux-profiles
+  if File.exists?("#{INSTALL_DIR}/tmux-profile/")
+    `mv "#{INSTALL_DIR}/tmux-profile/" "#{BACKUP_DIR}/.tmux-profile/"`
+  end
+  `cp -r "$PWD/tmux-profile/" "#{INSTALL_DIR}/tmux-profile/"`
+
+  # install other files
   linkables = Dir.glob('**{.symlink}')
   linkables.each do |linkable|
     file = linkable.split('/').last.split('.symlink').last
