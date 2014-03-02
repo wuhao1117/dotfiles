@@ -1,6 +1,6 @@
 require 'rake'
 
-INSTALL_DIR = "#{ENV["HOME"]}/test_install"
+INSTALL_DIR = "#{ENV["HOME"]}"
 BACKUP_DIR = "#{INSTALL_DIR}/.dotfile_backup"
 
 task :install do
