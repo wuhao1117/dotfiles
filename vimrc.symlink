@@ -7,18 +7,9 @@ filetype plugin indent on
 set nocompatible    " be iMproved
 set wildmenu    " enhanced command-line completion
 set ruler
-
-let g:airline#extensions#tabline#enabled = 1
-let g:airline_powerline_fonts = 1
-let g:airline_theme='solarized'
-set background=dark
-colorscheme solarized
-
 set noswapfile
-
 set hlsearch
-syntax on
-let g:Powerline_symbols = 'unicode'
+set cursorline
 set laststatus=2
 set encoding=utf-8
 set t_Co=16
@@ -26,26 +17,34 @@ set fillchars+=stl:\ ,stlnc:\
 set tabstop=4
 set shiftwidth=4
 set expandtab
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,node_modules
+set rtp+=~/.config/powerline/bindings/vim
+set background=dark
+
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
+let g:airline_theme = 'solarized'
+colorscheme solarized
+
+syntax on
+let g:Powerline_symbols = 'unicode'
 
 map <F6> :let &background = ( &background == "dark"? "light" : "dark" )<CR>
 vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 
 autocmd vimenter * NERDTree
-let NERDTreeShowHidden=1
+let NERDTreeShowHidden = 1
 let g:NERDTreeWinSize = 40
 let NERDTreeIgnore = ['.git','node_modules','.DS_Store']
-
-" my JavaScript preferences 
-autocmd filetype javascript setlocal autoindent
-autocmd filetype javascript setlocal expandtab
-autocmd filetype javascript setlocal shiftwidth=2
-autocmd filetype javascript setlocal tabstop=2
-
-set rtp+=~/.config/powerline/bindings/vim
 
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_dont_split = 'NERD_tree_2'
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,node_modules
+
+" my JavaScript preferences 
+autocmd filetype javascript setlocal autoindent
+autocmd filetype javascript setlocal expandtab
+autocmd filetype javascript setlocal shiftwidth=2
+autocmd filetype javascript setlocal tabstop=2
