@@ -8,9 +8,13 @@ alias __git_ps1="git branch 2>/dev/null | grep '*' | sed 's/* \(.*\)/(\1)/'"
 # enable git PS1 prompt
 export GIT_PS1_SHOWDIRTYSTATE=true
 export GIT_PS1_SHOWUNTRACKEDFILES=true
- 
-# define colorful gitful prompt
-PS1='\[\e[0;35m\][\t]\[\e[0;0m\]\u@\[\e[1;36m\]laptop\[\e[0;0m\]:\w\\$ '
+
+# show git brach in prompt
+parse_git_branch() {
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/[\1]/'
+}
+
+PS1="\[\e[0;35m\]\u@laptop\[\e[0;0m\] \w\[\e[0;34m\]\$(parse_git_branch)\[\e[0;0m\]: "
  
 # colors and aliases in file browsing
 export CLICOLOR=1
