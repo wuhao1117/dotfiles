@@ -12,13 +12,13 @@ sessions:
             size: 20
           - cmd: cd ~/Dropbox && clear
             split: h
-      - name: vim
+      - name: blue
         cmd: cd ~/Dropbox/dev && clear
         panes:
           - cmd: cd ~/Dropbox/dev && clear
             split: v
             size: 20
-      - name: vim
+      - name: green
         cmd: cd ~/Dropbox/dev && clear
         panes:
           - cmd: cd ~/Dropbox/dev && clear
