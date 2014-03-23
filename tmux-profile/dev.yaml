@@ -4,7 +4,7 @@ sessions:
     dir: ~/tmux-profile
     attach: true
     windows:
-      - name: astro
+      - name: vim
         cmd: cd ~/Dropbox && clear
         panes:
           - cmd: cd ~/Dropbox && clear
@@ -12,13 +12,13 @@ sessions:
             size: 20
           - cmd: cd ~/Dropbox && clear
             split: h
-      - name: bamboo
+      - name: vim
         cmd: cd ~/Dropbox/dev && clear
         panes:
           - cmd: cd ~/Dropbox/dev && clear
             split: v
             size: 20
-      - name: calais
+      - name: vim
         cmd: cd ~/Dropbox/dev && clear
         panes:
           - cmd: cd ~/Dropbox/dev && clear
