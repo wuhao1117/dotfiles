@@ -1,5 +1,7 @@
 [alias]
 	s = status
+	b = branch
+	rs = reset --soft HEAD~1
 [user]
 	name = Grant Titus
 	email = grant@granttitus.com
