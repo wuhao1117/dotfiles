@@ -21,6 +21,9 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip,node_modules
 set rtp+=~/.config/powerline/bindings/vim
 set background=dark
 
+" json synatx for vim
+autocmd BufNewFile,BufRead *.json set ft=javascript
+
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'solarized'
