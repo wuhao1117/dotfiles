@@ -32,6 +32,7 @@ colorscheme solarized
 syntax on
 let g:Powerline_symbols = 'unicode'
 
+map <F5> :%s/\s\+$//gc
 map <F6> :let &background = ( &background == "dark"? "light" : "dark" )<CR>
 vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 
