@@ -40,7 +40,7 @@ vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 autocmd vimenter * NERDTree
 let NERDTreeShowHidden = 1
 let g:NERDTreeWinSize = 40
-let NERDTreeIgnore = ['.git','node_modules','.DS_Store']
+let NERDTreeIgnore = ['.git','node_modules','.DS_Store', '\.pyc$']
 
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 let g:ctrlp_map = '<c-p>'
