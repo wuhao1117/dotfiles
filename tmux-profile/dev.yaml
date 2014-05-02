@@ -1,26 +1,19 @@
 description: TMUX profile
 sessions:
   - name: dev
-    dir: ~/tmux-profile
+    dir: ~/Development/tmux-profile
     attach: true
     windows:
-      - name: vim
-        cmd: cd ~/Dropbox && clear
+      - name: cook
+        cmd: dev && cd cookbooks/app-analysis && clear
         panes:
-          - cmd: cd ~/Dropbox && clear
-            split: v
-            size: 20
-          - cmd: cd ~/Dropbox && clear
+          - cmd: dev && cd cookbooks/app-pmt && clear
             split: h
-      - name: blue
-        cmd: cd ~/Dropbox/dev && clear
-        panes:
-          - cmd: cd ~/Dropbox/dev && clear
+          - cmd: dev && cd cookbooks/databags && clear
             split: v
-            size: 20
-      - name: green
-        cmd: cd ~/Dropbox/dev && clear
-        panes:
-          - cmd: cd ~/Dropbox/dev && clear
+          - cmd: dev && cd quid/analysis && clear
             split: v
-            size: 20
+      - name: pmt
+        cmd: pmt && clear
+      - name: vim
+        cmd: pmt && clear
