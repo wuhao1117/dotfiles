@@ -23,7 +23,7 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
-alias go="cd ~/tmux-profile/profiles && ruby ../load-tmux-profile.rb tmux && cd ~"
+alias go="cd ~/tmux-profile && ruby ./load-tmux-profile.rb dev"
 alias dev="cd ~/Quid/repos"
 alias pmt="dev && cd quid/pmt"
 alias tools="dev && cd tools/screener"
