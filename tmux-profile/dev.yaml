@@ -1,19 +1,27 @@
 description: TMUX profile
 sessions:
-  - name: dev
+
+  - name: cookbooks
     dir: ~/Development/tmux-profile
     attach: true
     windows:
-      - name: cook
+      - name: analysis
         cmd: dev && cd cookbooks/app-analysis && clear
         panes:
-          - cmd: dev && cd cookbooks/app-pmt && clear
-            split: h
-          - cmd: dev && cd cookbooks/databags && clear
-            split: v
           - cmd: dev && cd quid/analysis && clear
             split: v
-      - name: pmt
-        cmd: pmt && clear
-      - name: vim
-        cmd: pmt && clear
+      - name: quidweb
+        cmd: quidweb && clear
+      - name: databags
+        cmd: dev && cd cookbooks/databags && clear
+
+  - name: quidweb
+    dir: ~/Development/tmux-profile
+    attach: true
+    windows:
+      - name: dev
+        cmd: quidweb && clear
+      - name: dev
+        cmd: quidweb && clear
+      - name: vim 
+        cmd: quidweb && clear
