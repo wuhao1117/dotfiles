@@ -21,7 +21,7 @@ sessions:
     windows:
       - name: dev
         cmd: quidweb && clear
-      - name: dev
+      - name: source 
         cmd: quidweb && clear
       - name: vim
         cmd: quidweb && clear
