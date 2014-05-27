@@ -5,14 +5,14 @@ sessions:
     dir: ~/Development/tmux-profile
     attach: true
     windows:
-      - name: analysis
-        cmd: dev && cd cookbooks/app-analysis && clear
+      - name: cookbook
+        cmd: dev && cd cookbooks/service_quidweb && clear
+      - name: source
         panes:
           - cmd: dev && cd quid/analysis && clear
             split: v
-      - name: quidweb
         cmd: quidweb && clear
-      - name: databags
+      - name: databag
         cmd: dev && cd cookbooks/databags && clear
 
   - name: quidweb
@@ -23,5 +23,16 @@ sessions:
         cmd: quidweb && clear
       - name: dev
         cmd: quidweb && clear
-      - name: vim 
+      - name: vim
         cmd: quidweb && clear
+
+  - name: screener
+    dir: ~/Development/tmux-profile
+    attach: true
+    windows:
+      - name: dev
+        cmd: dev && cd tools/screener && clear
+      - name: dev
+        cmd: dev && cd tools/screener && clear
+      - name: vim
+        cmd: dev && cd tools/screener && clear
