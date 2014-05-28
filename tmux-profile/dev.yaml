@@ -32,7 +32,7 @@ sessions:
     windows:
       - name: dev
         cmd: dev && cd tools/screener && clear
-      - name: dev
+      - name: source
         cmd: dev && cd tools/screener && clear
       - name: vim
         cmd: dev && cd tools/screener && clear
