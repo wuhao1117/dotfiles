@@ -26,14 +26,15 @@ alias l='ls -CF'
 alias go="cd ~/tmux-profile && ruby ./load-tmux-profile.rb dev"
 alias dev="cd ~/Quid/repos"
 alias quidweb="dev && cd quid/pmt"
+alias qw="dev && cd quid/pmt"
 alias tools="dev && cd tools"
+alias opens="open -a 'Sublime Text'"
 alias vbr="sudo /Library/StartupItems/VirtualBox/VirtualBox restart"
 alias gdm="git branch --merged | grep -v '\*' | xargs -n 1 git branch -d"
 alias gall="git add -A && git commit -m"
 
-vmdo () { args="$@" ; cd ~/Quid/repos/cookbooks/service_quidweb ; vagrant ssh -c "sudo /sbin/runuser -l pmt -c 'cd /quid/apps/pmt/current ; $args ; ' ; " ; }
-vmtest () { cd ~/Quid/repos/cookbooks/service_quidweb ; vagrant ssh -c "sudo /sbin/runuser -l pmt -c 'cd /quid/apps/pmt/current ; bundle exec teaspoon && bundle exec rspec; ' ; " ; }
+vmdo () { args="$@" ; cd ~/Quid/repos/cookbooks/service_quidweb ; vagrant ssh quidweb -c "sudo /sbin/runuser -l quidweb -c 'cd /quid/apps/quidweb/current ; $args ; ' ; " ; }
+vmtest () { cd ~/Quid/repos/cookbooks/service_quidweb ; vagrant ssh quidweb -c "sudo /sbin/runuser -l quidweb -c 'cd /quid/apps/quidweb/current ; bundle exec teaspoon && bundle exec rspec; ' ; " ; }
 
 export VM_DEVELOP=true
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
+export LESS=-RFX
