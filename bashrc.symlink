@@ -31,8 +31,8 @@ alias vbr="sudo /Library/StartupItems/VirtualBox/VirtualBox restart"
 alias gdm="git branch --merged | grep -v '\*' | xargs -n 1 git branch -d"
 alias gall="git add -A && git commit -m"
 
-vmdo () { args="$@" ; cd ~/Quid/repos/cookbooks/app-pmt ; vagrant ssh -c "sudo /sbin/runuser -l pmt -c 'cd /quid/apps/pmt/current ; $args ; ' ; " ; }
-vmtest () { cd ~/Quid/repos/cookbooks/app-pmt ; vagrant ssh -c "sudo /sbin/runuser -l pmt -c 'cd /quid/apps/pmt/current ; bundle exec teaspoon && bundle exec rspec; ' ; " ; }
+vmdo () { args="$@" ; cd ~/Quid/repos/cookbooks/service_quidweb ; vagrant ssh -c "sudo /sbin/runuser -l pmt -c 'cd /quid/apps/pmt/current ; $args ; ' ; " ; }
+vmtest () { cd ~/Quid/repos/cookbooks/service_quidweb ; vagrant ssh -c "sudo /sbin/runuser -l pmt -c 'cd /quid/apps/pmt/current ; bundle exec teaspoon && bundle exec rspec; ' ; " ; }
 
 export VM_DEVELOP=true
 ### Added by the Heroku Toolbelt
