@@ -17,6 +17,7 @@ set fillchars+=stl:\ ,stlnc:\
 set tabstop=4
 set shiftwidth=4
 set expandtab
+set backspace=2
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,node_modules
 set rtp+=~/.config/powerline/bindings/vim
 set background=dark
