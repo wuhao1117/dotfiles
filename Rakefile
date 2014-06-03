@@ -24,9 +24,9 @@ task :install do
   `cp -r "$PWD/tmux-profile/" "#{INSTALL_DIR}/tmux-profile/"`
 
   # install other files
-  linkables = Dir.glob('**{.symlink}')
+  linkables = Dir.glob('**{.d}')
   linkables.each do |linkable|
-    file = linkable.split('/').last.split('.symlink').last
+    file = linkable.split('/').last.split('.d').last
     target = "#{INSTALL_DIR}/.#{file}"
 
     if File.exists?("#{INSTALL_DIR}/.#{file}")

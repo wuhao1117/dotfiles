@@ -37,4 +37,3 @@ vmdo () { args="$@" ; cd ~/Quid/repos/cookbooks/service_quidweb ; vagrant ssh qu
 vmtest () { cd ~/Quid/repos/cookbooks/service_quidweb ; vagrant ssh quidweb -c "sudo /sbin/runuser -l quidweb -c 'cd /quid/apps/quidweb/current ; bundle exec teaspoon && bundle exec rspec; ' ; " ; }
 
 export VM_DEVELOP=true
-export LESS=-RFX
