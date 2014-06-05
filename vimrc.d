@@ -32,7 +32,7 @@ colorscheme solarized
 
 syntax on
 let g:Powerline_symbols = 'unicode'
-noremap <C-d> :NERDTreeToggle<CR>
+noremap <C-e> :NERDTreeToggle<CR>
 noremap <F5> :%s/\s\+$//gc
 noremap <F6> :let &background = ( &background == "dark"? "light" : "dark" )<CR>
 nnoremap <C-i> :IndentGuidesToggle<CR>
