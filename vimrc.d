@@ -4,8 +4,8 @@ call pathogen#runtime_append_all_bundles()
 call pathogen#helptags() " generate helptags for everything in 'runtimepath'
 filetype plugin indent on
 
-set nocompatible    " be iMproved
-set wildmenu    " enhanced command-line completion
+set nocompatible
+set wildmenu
 set ruler
 set noswapfile
 set hlsearch
@@ -32,9 +32,9 @@ colorscheme solarized
 
 syntax on
 let g:Powerline_symbols = 'unicode'
-
-map <F5> :%s/\s\+$//gc
-map <F6> :let &background = ( &background == "dark"? "light" : "dark" )<CR>
+noremap <C-d> :NERDTreeToggle<CR>
+noremap <F5> :%s/\s\+$//gc
+noremap <F6> :let &background = ( &background == "dark"? "light" : "dark" )<CR>
 nnoremap <C-i> :IndentGuidesToggle<CR>
 vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 
@@ -48,9 +48,3 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_dont_split = 'NERD_tree_2'
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|docs\|git'
-
-" my JavaScript preferences 
-autocmd filetype javascript setlocal autoindent
-autocmd filetype javascript setlocal expandtab
-autocmd filetype javascript setlocal shiftwidth=2
-autocmd filetype javascript setlocal tabstop=2
