@@ -33,6 +33,7 @@ noremap <F5> :%s/\s\+$//gc
 noremap <F6> :let &background = ( &background == "dark"? "light" : "dark" )<CR>
 nnoremap <C-i> :IndentGuidesToggle<CR>
 vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
+inoremap jk <esc>
 
 " json synatx for vim
 autocmd BufNewFile,BufRead *.json set ft=javascript
