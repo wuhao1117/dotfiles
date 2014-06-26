@@ -26,3 +26,5 @@ set -g status-bg blue
 set -g status-left ''
 set -g status-right-length 60
 set -g status-right '%a %m-%d %H:%M'
+
+set-window-option -g mode-keys vi
