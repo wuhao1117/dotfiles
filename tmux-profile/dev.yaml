@@ -7,11 +7,6 @@ sessions:
     windows:
       - name: cookbook
         cmd: dev && cd cookbooks/service_quidweb && clear
-      - name: source
-        panes:
-          - cmd: dev && cd quid/analysis && clear
-            split: v
-        cmd: quidweb && clear
       - name: databag
         cmd: dev && cd cookbooks/databags && clear
 
@@ -20,19 +15,26 @@ sessions:
     attach: true
     windows:
       - name: dev
-        cmd: quidweb && clear
-      - name: source 
-        cmd: quidweb && clear
-      - name: vim
-        cmd: quidweb && clear
+        cmd: qw && clear
+      - name: source
+        cmd: qw && clear
+      - name: vim 
+        cmd: qw && clear
 
-  - name: screener
+  - name: schema
     dir: ~/Development/tmux-profile
     attach: true
     windows:
       - name: dev
-        cmd: dev && cd tools/screener && clear
+        cmd: qw && cd schema && clear
+  
+  - name: screener 
+    dir: ~/Development/tmux-profile
+    attach: true
+    windows:
+      - name: dev
+        cmd: sc && clear
       - name: source
-        cmd: dev && cd tools/screener && clear
-      - name: vim
-        cmd: dev && cd tools/screener && clear
+        cmd: sc && clear
+      - name: vim 
+        cmd: sc && clear
