@@ -31,8 +31,6 @@ if [ -f `brew --prefix`/etc/bash_completion ]; then
 fi
 
 # git
-alias s='git status'
-alias d='git diff'
 alias gall='git add -A && git commit -m'
 alias gdm="git branch --merged | grep -v '\*' | xargs -n 1 git branch -d"
 
