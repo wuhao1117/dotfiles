@@ -19,6 +19,7 @@ set backspace=2  " backspace over everything
 set laststatus=2 " always show last status line
 set tabstop=4    " number of spaces that equal <Tab>
 set shiftwidth=4 " how many columns to shift on << or >>
+set softtabstop=4
 set expandtab    " insert spaces for tab
 
 set encoding=utf-8
