@@ -38,6 +38,7 @@ inoremap jk <esc>
 
 " json synatx for vim
 autocmd BufNewFile,BufRead *.json set ft=javascript
+autocmd *.md setlocal spell
 
 " Airline
 let g:airline#extensions#tabline#enabled = 1
