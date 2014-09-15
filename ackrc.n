@@ -2,4 +2,5 @@
 --color-filename=blue
 --color-lineno=yellow
 --ignore-dir=tmp
+--ignore-dir=qa
 --ignore-dir=public
