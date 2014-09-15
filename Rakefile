@@ -26,7 +26,7 @@ task :install do
     # Install other files
     linkables = Dir.glob('**{.d}')
     linkables.each do |linkable|
-        file = linkable.split('/').last.split('.d').last
+        file = linkable.split('/').last.split('.n').last
         target = "#{INSTALL_DIR}/.#{file}"
 
         if File.exists?("#{INSTALL_DIR}/.#{file}")
