@@ -1,3 +1,5 @@
 --pager=LESS=FSRX less -r
 --color-filename=blue
 --color-lineno=yellow
+--ignore-dir=tmp
+--ignore-dir=public
