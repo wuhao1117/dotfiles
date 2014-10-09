@@ -5,10 +5,14 @@ sessions:
     dir: ~/Development/tmux-profile
     attach: true
     windows:
-      - name: cookbook
-        cmd: dev && cd cookbooks/service_quidweb && clear
-      - name: databag
+      - name: databags
         cmd: dev && cd cookbooks/databags && clear
+      - name: quidweb
+        cmd: dev && cd cookbooks/service_quidweb && clear
+      - name: newviz
+        cmd: dev && cd cookbooks/service_newviz && clear
+      - name: screener
+        cmd: dev && cd cookbooks/service_screener && clear
 
   - name: quidweb
     dir: ~/Development/tmux-profile
@@ -18,8 +22,19 @@ sessions:
         cmd: qw && clear
       - name: source
         cmd: qw && clear
-      - name: vim 
+      - name: vim
         cmd: qw && clear
+
+  - name: newviz
+    dir: ~/Development/tmux-profile
+    attach: true
+    windows:
+      - name: dev
+        cmd: dev && cd alpha/new-viz && clear
+      - name: source
+        cmd: dev && cd alpha/new-viz && clear
+      - name: vim
+        cmd: dev && cd alpha/new-viz && clear
 
   - name: schema
     dir: ~/Development/tmux-profile
@@ -27,8 +42,8 @@ sessions:
     windows:
       - name: dev
         cmd: qw && cd schema && clear
-  
-  - name: screener 
+
+  - name: screener
     dir: ~/Development/tmux-profile
     attach: true
     windows:
@@ -36,5 +51,5 @@ sessions:
         cmd: sc && clear
       - name: source
         cmd: sc && clear
-      - name: vim 
+      - name: vim
         cmd: sc && clear
