@@ -53,7 +53,7 @@ let g:Powerline_symbols = 'unicode'
 autocmd vimenter * NERDTree
 let g:NERDTreeShowHidden = 1
 let g:NERDTreeWinSize = 40
-let g:NERDTreeIgnore = ['.git$','node_modules','.DS_Store', '\.pyc$']
+let g:NERDTreeIgnore = ['.git$','.DS_Store', '\.pyc$']
 
 " CTRLP
 let g:ctrlp_map = '<c-p>'
