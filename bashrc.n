@@ -10,7 +10,7 @@ alias ll='ls -alF'
 alias l='ls -CF'
 
 # tmux
-alias go='cd ~/tmux-profile && ruby ./load-tmux-profile.rb dev'
+alias tm='cd ~/tmux-profile && ruby ./load-tmux-profile.rb dev'
 
 # navigation
 alias dev='cd ~/Quid/repos'
