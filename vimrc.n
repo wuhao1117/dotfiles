@@ -26,7 +26,7 @@ set encoding=utf-8
 set background=dark 
 
 set rtp+=~/.config/powerline/bindings/vim " runtime path
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,node_modules " files to ignore
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.o,*.hi " files to ignore
 set fillchars+=stl:\ ,stlnc:\ " set blank statusline separator
 
 noremap <C-e> :NERDTreeToggle<CR>
