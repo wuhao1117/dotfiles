@@ -2,25 +2,31 @@ description: TMUX profile
 sessions:
 
   - name: apple
-    dir: ~/Development/tmux-profile
     attach: true
     windows:
-      - cmd: dev && clear
-      - cmd: dev && clear
-      - cmd: dev && clear
+      - name: '0'
+        cmd: dev && clear
+      - name: '1'
+        cmd: dev && clear
+      - name: '2'
+        cmd: dev && clear
 
   - name: banana
-    dir: ~/Development/tmux-profile
     attach: true
     windows:
-      - cmd: dev && clear
-      - cmd: dev && clear
-      - cmd: dev && clear
+      - name: '0'
+        cmd: dev && clear
+      - name: '1'
+        cmd: dev && clear
+      - name: '2'
+        cmd: dev && clear
 
   - name: carrot
-    dir: ~/Development/tmux-profile
     attach: true
     windows:
-      - cmd: dev && clear
-      - cmd: dev && clear
-      - cmd: dev && clear
+      - name: '0'
+        cmd: dev && clear
+      - name: '1'
+        cmd: dev && clear
+      - name: '2'
+        cmd: dev && clear
