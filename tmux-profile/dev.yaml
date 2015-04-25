@@ -1,55 +1,26 @@
 description: TMUX profile
 sessions:
 
-  - name: cookbooks
+  - name: apple
     dir: ~/Development/tmux-profile
     attach: true
     windows:
-      - name: databags
-        cmd: dev && cd cookbooks/databags && clear
-      - name: quidweb
-        cmd: dev && cd cookbooks/service_quidweb && clear
-      - name: newviz
-        cmd: dev && cd cookbooks/service_newviz && clear
-      - name: screener
-        cmd: dev && cd cookbooks/service_screener && clear
+      - cmd: dev && clear
+      - cmd: dev && clear
+      - cmd: dev && clear
 
-  - name: quidweb
+  - name: banana
     dir: ~/Development/tmux-profile
     attach: true
     windows:
-      - name: dev
-        cmd: qw && clear
-      - name: source
-        cmd: qw && clear
-      - name: vim
-        cmd: qw && clear
+      - cmd: dev && clear
+      - cmd: dev && clear
+      - cmd: dev && clear
 
-  - name: newviz
+  - name: carrot
     dir: ~/Development/tmux-profile
     attach: true
     windows:
-      - name: dev
-        cmd: dev && cd alpha/new-viz && clear
-      - name: source
-        cmd: dev && cd alpha/new-viz && clear
-      - name: vim
-        cmd: dev && cd alpha/new-viz && clear
-
-  - name: schema
-    dir: ~/Development/tmux-profile
-    attach: true
-    windows:
-      - name: dev
-        cmd: qw && cd schema && clear
-
-  - name: screener
-    dir: ~/Development/tmux-profile
-    attach: true
-    windows:
-      - name: dev
-        cmd: sc && clear
-      - name: source
-        cmd: sc && clear
-      - name: vim
-        cmd: sc && clear
+      - cmd: dev && clear
+      - cmd: dev && clear
+      - cmd: dev && clear

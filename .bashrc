@@ -12,36 +12,26 @@ alias l='ls -CF'
 # tmux
 alias tm='cd ~/tmux-profile && ruby ./load-tmux-profile.rb dev'
 
-# navigation
 alias dev='cd ~/Quid/repos'
-alias qw='dev && cd quid/pmt'
-alias sq='dev && cd cookbooks/service_quidweb'
-alias sc='dev && cd tools/screener'
 
 # VM
 alias vbr='sudo /Library/StartupItems/VirtualBox/VirtualBox restart'
-alias vmgo='sq && vagrant ssh quidweb'
-
-vmdo () { args="$@" ; cd ~/Quid/repos/cookbooks/service_quidweb ; vagrant ssh quidweb -c "sudo /sbin/runuser -l quidweb -c 'cd /quid/apps/quidweb/current ; $args ; ' ; " ; }
-vmtest () { cd ~/Quid/repos/cookbooks/service_quidweb ; vagrant ssh quidweb -c "sudo /sbin/runuser -l quidweb -c 'cd /quid/apps/quidweb/current ; bundle exec teaspoon && bundle exec rspec; ' ; " ; }
-
 
 if [ -f `brew --prefix`/etc/bash_completion ]; then
     . `brew --prefix`/etc/bash_completion
 fi
 
+# git
 if [ -f ~/.git-completion.bash ]; then
   . ~/.git-completion.bash
 fi
 
-# git
 alias gall='git add -A && git commit -m'
 alias gdm="git branch --merged | grep -v '\*' | xargs -n 1 git branch -d"
 
 export GIT_PS1_SHOWDIRTYSTATE=true
 export GIT_PS1_SHOWUNTRACKEDFILES=true
 
-# show git brach in prompt
 parse_git_branch() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/[\1]/'
 }
