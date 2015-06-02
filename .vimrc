@@ -39,7 +39,7 @@ let mapleader = "\<Space>"
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>m :noh<CR>
 nnoremap <Leader>p :set paste<CR>
-inoremap <Leader>n <Esc>
+inoremap <Leader>n<Leader> <Esc>
 
 " json synatx for vim
 autocmd BufNewFile,BufRead *.json set ft=javascript
