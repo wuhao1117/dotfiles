@@ -34,9 +34,12 @@ noremap <F5> :%s/\s\+$//gc
 noremap <F6> :let &background = ( &background == "dark"? "light" : "dark" )<CR>
 nnoremap <C-i> :IndentGuidesToggle<CR>
 vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
-nnoremap <space>m :noh<CR>
-nnoremap <space>h :set nohlsearch<CR>
-nnoremap <space>p :set paste<CR>
+
+let mapleader = "\<Space>"
+nnoremap <Leader>w :w<CR>
+nnoremap <Leader>m :noh<CR>
+nnoremap <Leader>p :set paste<CR>
+inoremap <Leader>n <Esc>
 
 " json synatx for vim
 autocmd BufNewFile,BufRead *.json set ft=javascript
