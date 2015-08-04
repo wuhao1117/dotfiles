@@ -1,6 +1,6 @@
 " Pathogen
 filetype off " Pathogen needs to run before plugin indent on
-call pathogen#runtime_append_all_bundles()
+call pathogen#incubate()
 call pathogen#helptags()
 filetype plugin indent on
 
