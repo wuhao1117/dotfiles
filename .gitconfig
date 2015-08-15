@@ -1,6 +1,7 @@
 [alias]
 	s = status
 	d = diff
+	ds = diff --staged
 	b = branch
 	su = submodule update
 	rs = reset --soft HEAD~1
