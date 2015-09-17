@@ -1,5 +1,5 @@
 " Pathogen
-filetype off " Pathogen needs to run before plugin indent on
+filetype off
 call pathogen#incubate()
 call pathogen#helptags()
 filetype plugin indent on
@@ -41,8 +41,8 @@ nnoremap <Leader>m :noh<CR>
 nnoremap <Leader>p :set paste<CR>
 imap jj <Esc>
 
-" json synatx for vim
 autocmd BufNewFile,BufRead *.json set ft=javascript
+autocmd BufRead,BufNewFile *.md setlocal spell
 
 " Airline
 let g:airline#extensions#tabline#enabled = 1
