@@ -40,6 +40,7 @@ let mapleader = "\<Space>"
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>m :noh<CR>
 nnoremap <Leader>p :set paste<CR>
+noremap <Leader>q :%! jq .<CR>
 imap jj <Esc>
 
 " json synatx for vim
