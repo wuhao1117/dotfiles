@@ -9,9 +9,7 @@ export ENV=local
 alias ll='ls -alF'
 alias l='ls -CF'
 
-# tmux
 alias tm='cd ~/tmux-profile && ruby ./load-tmux-profile.rb dev'
-
 alias dev='cd ~/Quid/repos'
 
 # VM

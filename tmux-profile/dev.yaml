@@ -1,6 +1,7 @@
 description: TMUX profile
 sessions:
 
+    # customize per env
   - name: apple
     attach: true
     windows:

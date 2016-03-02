@@ -4,3 +4,6 @@
 --ignore-dir=tmp
 --ignore-dir=qa
 --ignore-dir=public
+--ignore-dir=log
+--ignore-dir=coverage
+--ignore-dir=report
